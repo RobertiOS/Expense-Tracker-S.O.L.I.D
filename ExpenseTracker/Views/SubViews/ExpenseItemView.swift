@@ -37,6 +37,6 @@ struct ExpenseItemView: View {
 
 struct ExpenseItemView_Previews: PreviewProvider {
   static var previews: some View {
-    ExpenseItemView(expenseItem: AppMain.previewItem)
+    ExpenseItemView(expenseItem: PersistenceController.previewItem)
   }
 }

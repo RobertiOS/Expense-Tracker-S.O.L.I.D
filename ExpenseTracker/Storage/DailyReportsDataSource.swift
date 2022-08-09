@@ -6,7 +6,7 @@ class DailyReportsDataSource: ObservableObject {
 
   @Published private(set) var currentEntries: [ExpenseModel] = []
 
-  init(viewContext: NSManagedObjectContext = AppMain.container.viewContext) {
+  init(viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
     self.viewContext = viewContext
     prepare()
   }

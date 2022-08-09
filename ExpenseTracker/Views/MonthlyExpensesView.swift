@@ -35,7 +35,7 @@ struct MonthlyExpensesView: View {
 
 struct MonthlyExpensesView_Previews: PreviewProvider {
   static var previews: some View {
-    let reportsDataSource = MonthlyReportsDataSource(viewContext: AppMain.previewContainer.viewContext)
+    let reportsDataSource = MonthlyReportsDataSource(viewContext: PersistenceController.preview.container.viewContext)
     MonthlyExpensesView(dataSource: reportsDataSource)
   }
 }
