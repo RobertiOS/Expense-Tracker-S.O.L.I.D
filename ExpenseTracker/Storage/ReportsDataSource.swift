@@ -1,13 +1,15 @@
 import CoreData
 import Combine
 
-class DailyReportsDataSource: ObservableObject {
+class ReportsDataSource: ObservableObject {
   var viewContext: NSManagedObjectContext
+  let reportRange: ReportRange
 
   @Published private(set) var currentEntries: [ExpenseModel] = []
 
-  init(viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+  init(viewContext: NSManagedObjectContext = PersistenceController.shared.container.viewContext, reportRange: ReportRange) {
     self.viewContext = viewContext
+    self.reportRange = reportRange
     prepare()
   }
 
@@ -18,10 +20,13 @@ class DailyReportsDataSource: ObservableObject {
   private func getEntries() -> [ExpenseModel] {
     let fetchRequest: NSFetchRequest<ExpenseModel> = ExpenseModel.fetchRequest()
     fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \ExpenseModel.date, ascending: false)]
+    
+    let (startDate, endDate) = reportRange.timeRange()
+    
     fetchRequest.predicate = NSPredicate(
       format: "%@ <= date AND date <= %@",
-      Date().startOfDay as CVarArg,
-      Date().endOfDay as CVarArg)
+      startDate as CVarArg,
+      endDate as CVarArg)
     do {
       let results = try viewContext.fetch(fetchRequest)
       return results

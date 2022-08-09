@@ -4,27 +4,20 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List {
-        NavigationLink(
-          "Today",
-          destination: dailyReport
-            .navigationTitle("Today"))
-        NavigationLink(
-          "This Month",
-          destination: monthlyReport
-            .navigationTitle("This Month"))
+        ForEach(ReportRange.allCases, id: \.self) { range in
+          NavigationLink(
+            range.rawValue,
+            destination: expenseView(for: range).navigationTitle(range.rawValue)
+          )
+        }
       }
       .navigationTitle("Reports")
     }
   }
 
-  var dailyReport: DailyExpensesView {
-    let dailyDataSource = DailyReportsDataSource()
-    return DailyExpensesView(dataSource: dailyDataSource)
-  }
-
-  var monthlyReport: MonthlyExpensesView {
-    let monthlyDataSource = MonthlyReportsDataSource()
-    return MonthlyExpensesView(dataSource: monthlyDataSource)
+  func expenseView(for range: ReportRange) -> ExpensesView {
+    let dataSource = ReportsDataSource(reportRange: range)
+    return ExpensesView(dataSource: dataSource)
   }
 }
 
