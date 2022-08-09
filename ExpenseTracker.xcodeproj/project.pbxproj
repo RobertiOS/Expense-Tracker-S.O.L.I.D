@@ -15,6 +15,8 @@
 		E165624628A20A40000D6E73 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E165624528A20A40000D6E73 /* readme.md */; };
 		E165624828A20EB1000D6E73 /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624728A20EB1000D6E73 /* Persistance.swift */; };
 		E165624B28A21404000D6E73 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624A28A21404000D6E73 /* Enums.swift */; };
+		E165624E28A2F3CD000D6E73 /* ReportReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624D28A2F3CD000D6E73 /* ReportReader.swift */; };
+		E165625028A2F3E6000D6E73 /* ExpenseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */; };
 		F52DF9F526013D050047F837 /* ReportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DF9F326013D050047F837 /* ReportsDataSource.swift */; };
 		F5AEF3A025FC2BA400A25CE0 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AEF39F25FC2BA400A25CE0 /* ExpensesView.swift */; };
 		F5AEF3A325FC2BD700A25CE0 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AEF3A225FC2BD700A25CE0 /* AddExpenseView.swift */; };
@@ -37,6 +39,8 @@
 		E165624528A20A40000D6E73 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		E165624728A20EB1000D6E73 /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		E165624A28A21404000D6E73 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		E165624D28A2F3CD000D6E73 /* ReportReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportReader.swift; sourceTree = "<group>"; };
+		E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModelProtocol.swift; sourceTree = "<group>"; };
 		F52DF9F326013D050047F837 /* ReportsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsDataSource.swift; sourceTree = "<group>"; };
 		F5AEF39F25FC2BA400A25CE0 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		F5AEF3A225FC2BD700A25CE0 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		18D775BF22AD944300AE281E /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E165624C28A2F390000D6E73 /* Protocols */,
 				E165624928A213F3000D6E73 /* Utilities */,
 				F5BE6D9C25FD99310013B09C /* Extensions */,
 				F5AEF3A825FC2F9300A25CE0 /* Storage */,
@@ -108,6 +113,15 @@
 				E165624A28A21404000D6E73 /* Enums.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E165624C28A2F390000D6E73 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E165624D28A2F3CD000D6E73 /* ReportReader.swift */,
+				E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F5AEF39E25FC2B7C00A25CE0 /* Views */ = {
@@ -244,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E165624E28A2F3CD000D6E73 /* ReportReader.swift in Sources */,
 				F5AEF3BE25FC3F3400A25CE0 /* ExpenseModel+CoreDataClass.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				F5AEF3A025FC2BA400A25CE0 /* ExpensesView.swift in Sources */,
@@ -253,6 +268,7 @@
 				F5AEF3AC25FC2FC100A25CE0 /* ExpensesModel.xcdatamodeld in Sources */,
 				E165624B28A21404000D6E73 /* Enums.swift in Sources */,
 				E165624828A20EB1000D6E73 /* Persistance.swift in Sources */,
+				E165625028A2F3E6000D6E73 /* ExpenseModelProtocol.swift in Sources */,
 				F5AEF3B025FC36B100A25CE0 /* TotalView.swift in Sources */,
 				F5AEF3A325FC2BD700A25CE0 /* AddExpenseView.swift in Sources */,
 				F52DF9F526013D050047F837 /* ReportsDataSource.swift in Sources */,
