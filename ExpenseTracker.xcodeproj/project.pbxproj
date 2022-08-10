@@ -17,6 +17,7 @@
 		E165624B28A21404000D6E73 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624A28A21404000D6E73 /* Enums.swift */; };
 		E165624E28A2F3CD000D6E73 /* ReportReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624D28A2F3CD000D6E73 /* ReportReader.swift */; };
 		E165625028A2F3E6000D6E73 /* ExpenseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */; };
+		E165625228A43528000D6E73 /* SaveEntryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E165625128A43528000D6E73 /* SaveEntryProtocol.swift */; };
 		F52DF9F526013D050047F837 /* ReportsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52DF9F326013D050047F837 /* ReportsDataSource.swift */; };
 		F5AEF3A025FC2BA400A25CE0 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AEF39F25FC2BA400A25CE0 /* ExpensesView.swift */; };
 		F5AEF3A325FC2BD700A25CE0 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AEF3A225FC2BD700A25CE0 /* AddExpenseView.swift */; };
@@ -41,6 +42,7 @@
 		E165624A28A21404000D6E73 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		E165624D28A2F3CD000D6E73 /* ReportReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportReader.swift; sourceTree = "<group>"; };
 		E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModelProtocol.swift; sourceTree = "<group>"; };
+		E165625128A43528000D6E73 /* SaveEntryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveEntryProtocol.swift; sourceTree = "<group>"; };
 		F52DF9F326013D050047F837 /* ReportsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsDataSource.swift; sourceTree = "<group>"; };
 		F5AEF39F25FC2BA400A25CE0 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		F5AEF3A225FC2BD700A25CE0 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				E165624D28A2F3CD000D6E73 /* ReportReader.swift */,
 				E165624F28A2F3E6000D6E73 /* ExpenseModelProtocol.swift */,
+				E165625128A43528000D6E73 /* SaveEntryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				F5AEF3A025FC2BA400A25CE0 /* ExpensesView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
+				E165625228A43528000D6E73 /* SaveEntryProtocol.swift in Sources */,
 				F5AEF3BF25FC3F3400A25CE0 /* ExpenseModel+CoreDataProperties.swift in Sources */,
 				F5AEF3A625FC2BE300A25CE0 /* ExpenseItemView.swift in Sources */,
 				F5AEF3AC25FC2FC100A25CE0 /* ExpensesModel.xcdatamodeld in Sources */,

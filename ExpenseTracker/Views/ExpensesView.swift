@@ -21,11 +21,11 @@ struct ExpensesView: View {
         Image(systemName: "plus")
       })
     }
-    .fullScreenCover(
-      isPresented: $isAddPresented) {
-      AddExpenseView { title, price, time, comment in
-        dataSource.saveEntry(title: title, price: price, date: time, comment: comment)
+    .fullScreenCover(isPresented: $isAddPresented) { () -> AddExpenseView? in
+      guard let saveHandler = dataSource as? SaveEntryProtocol else {
+        return nil
       }
+      return AddExpenseView(saveEntryHandler: saveHandler)
     }
     .onAppear {
       dataSource.prepare()
@@ -43,7 +43,7 @@ struct DailyExpensesView_Previews: PreviewProvider {
     var id: UUID? = UUID()
   }
   
-  class PreviewReportsDataSource: ReportReader {
+  class PreviewReportsDataSource: ReportReader, SaveEntryProtocol {
     override init() {
       super.init()
       for index in 1..<6 {
@@ -58,7 +58,7 @@ struct DailyExpensesView_Previews: PreviewProvider {
     override func prepare() {
     }
 
-    override func saveEntry(
+    func saveEntry(
       title: String,
       price: Double,
       date: Date,
